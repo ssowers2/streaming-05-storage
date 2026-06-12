@@ -366,3 +366,33 @@ Look for the text `db`:
 | C05 | Consumer executed successfully!
 | C05 | ========================
 ```
+
+## Technical Modification
+
+### What I Changed
+
+I modified the Kafka consumer by creating and using
+`kafka_consumer_sowers.py`.
+
+The consumer writes processed sales data to:
+
+- `data/output/consumed_sales_sowers.csv`
+- `data/output/sales_sowers.duckdb`
+
+### Why I Made the Change
+
+I wanted to create my own version of the consumer and
+generate personalized output files without overwriting
+the instructor's example files.
+
+### What I Observed
+
+After running the producer and consumer, 6 sales
+messages were processed successfully.
+
+The consumer created both:
+
+- `consumed_sales_sowers.csv`
+- `sales_sowers.duckdb`
+
+This confirmed that my modification worked correctly.
