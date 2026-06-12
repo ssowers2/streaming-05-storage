@@ -172,7 +172,7 @@ bin/kafka-topics.sh --create \
   --bootstrap-server localhost:9092 \
   --partitions 1 \
   --replication-factor 1 \
-  --topic streaming-05-storage-case
+  --topic streaming-05-storage-sowers
 ```
 
 ### In VS Code Terminal 3: Run Project and Producer (producer)
@@ -199,7 +199,7 @@ uvx pre-commit run --all-files
 
 # run the producer
 clear
-uv run python -m streaming.kafka_producer_case
+uv run python -m streaming.kafka_producer_sowers
 
 # do chores
 uv run ruff format .
@@ -223,7 +223,7 @@ Clear the terminal, then start the consumer.
 
 ```shell
 clear
-uv run python -m streaming.kafka_consumer_case
+uv run python -m streaming.kafka_consumer_sowers
 ```
 
 To start fresh, see

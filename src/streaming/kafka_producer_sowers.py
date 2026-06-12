@@ -1,27 +1,4 @@
-"""src/streaming/kafke_producer_case.py - Kafka producer example.
-
-Reads sales from data/sales.csv,
-validates them against the data contract,
-writes rejected records to a local CSV file,
-and sends valid records to a Kafka topic one message at a time.
-
-Start with main() at the bottom.
-Work up to see how it all fits together.
-
-Many functions are standard helpers
-and should not need project-specific modifications.
-
-Author: Denise Case
-Date: 2026-05
-
-Terminal command to run this file from the root project folder:
-
-    uv run python -m streaming.kafka_producer_case
-
-OBS:
-  Don't edit this file - it should remain a working example.
-  Copy it, rename it producer_yourname.py, and modify your copy.
-"""
+"""src/streaming/kafke_producer_sowers.py."""
 
 # === DECLARE IMPORTS ===
 
@@ -86,7 +63,7 @@ ROOT_DIR: Final[Path] = Path.cwd()
 DATA_DIR: Final[Path] = ROOT_DIR / "data"
 OUTPUT_DIR: Final[Path] = DATA_DIR / "output"
 
-SALES_CSV: Final[Path] = DATA_DIR / "sales.csv"
+SALES_CSV: Final[Path] = DATA_DIR / "sales_sowers.csv"
 REGIONS_CSV: Final[Path] = DATA_DIR / "regions.csv"
 PRODUCTS_CSV: Final[Path] = DATA_DIR / "products.csv"
 REJECTED_SALES_CSV: Final[Path] = OUTPUT_DIR / "producer_rejected_sales.csv"

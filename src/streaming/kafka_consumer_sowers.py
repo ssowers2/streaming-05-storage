@@ -1,40 +1,4 @@
-"""src/streaming/kafka_consumer_case.py.
-
-Kafka consumer: full pipeline example.
-
-Reads sales messages from a Kafka topic and runs the full pipeline:
-  - Validates each message against the data contract
-  - Computes derived fields (subtotal, tax amount, total)
-  - Stores each message in a DuckDB database
-
-Start with main() at the bottom.
-Work up to see how it all fits together.
-
-Many functions are standard helpers
-and should not need project-specific modifications.
-
-# In this example, we open, write, and close the DuckDB database
-# for each accepted message. This makes each message visible in
-# the database immediately, even if the consumer is stopped early.
-#
-# In production, a long-running consumer might keep the database
-# connection open longer and commit work in batches for efficiency.
-
-# Stream processing engines like Spark Structured Streaming or Flink
-# are designed to manage resources and state
-# and are excellent additions to this type of pipeline for production use.
-
-Author: Denise Case
-Date: 2026-05
-
-Terminal command to run this file from the root project folder:
-
-    uv run python -m streaming.kafka_consumer_case
-
-OBS:
-  Don't edit this file - it should remain a working example.
-  Copy it, rename it consumer_yourname.py, and modify your copy.
-"""
+"""src/streaming/kafka_consumer_sowers.py."""
 
 # === DECLARE IMPORTS ===
 
@@ -89,13 +53,14 @@ ROOT_DIR: Final[Path] = Path.cwd()
 DATA_DIR: Final[Path] = ROOT_DIR / "data"
 OUTPUT_DIR: Final[Path] = DATA_DIR / "output"
 
-OUTPUT_CSV: Final[Path] = OUTPUT_DIR / "consumed_sales.csv"
-OUTPUT_DB: Final[Path] = OUTPUT_DIR / "sales.duckdb"
+OUTPUT_CSV: Final[Path] = OUTPUT_DIR / "consumed_sales_sowers.csv"
+OUTPUT_DB: Final[Path] = OUTPUT_DIR / "sales_sowers.duckdb"
+SUMMARY_CSV: Final[Path] = OUTPUT_DIR / "sales_summary_sowers.csv"
 
-REGIONS_CSV: Final[Path] = DATA_DIR / "regions.csv"
-PRODUCTS_CSV: Final[Path] = DATA_DIR / "products.csv"
-CURRENCIES_CSV: Final[Path] = DATA_DIR / "currencies.csv"
-DISCOUNT_CODES_CSV: Final[Path] = DATA_DIR / "discount_codes.csv"
+REGIONS_CSV: Final[Path] = DATA_DIR / "regions_sowers.csv"
+PRODUCTS_CSV: Final[Path] = DATA_DIR / "products_sowers.csv"
+CURRENCIES_CSV: Final[Path] = DATA_DIR / "currencies_sowers.csv"
+DISCOUNT_CODES_CSV: Final[Path] = DATA_DIR / "discount_codes_sowers.csv"
 
 
 # ==========================================================
