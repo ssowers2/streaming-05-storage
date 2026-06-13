@@ -62,7 +62,6 @@ PRODUCTS_CSV: Final[Path] = DATA_DIR / "products_sowers.csv"
 CURRENCIES_CSV: Final[Path] = DATA_DIR / "currencies_sowers.csv"
 DISCOUNT_CODES_CSV: Final[Path] = DATA_DIR / "discount_codes_sowers.csv"
 
-
 # ==========================================================
 # DEFINE SECTION A. ACQUIRE RESOURCES AND GET READY HELPERS
 # ==========================================================

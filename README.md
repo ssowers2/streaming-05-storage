@@ -367,7 +367,7 @@ Look for the text `db`:
 | C05 | ========================
 ```
 
-## Technical Modification
+## Phase 4: Technical Modification
 
 ### What I Changed
 
@@ -396,3 +396,45 @@ The consumer created both:
 - `sales_sowers.duckdb`
 
 This confirmed that my modification worked correctly.
+
+## Phase 5: Sales by Region Analysis
+
+### Project Enhancement
+
+I applied the streaming project to a sales
+analysis problem. After processing the sales data, I used
+a Jupyter notebook to analyze order counts by region.
+
+### Analysis
+
+I grouped sales records by region and counted the number
+of orders for each region. The results were sorted from
+highest to lowest to identify the regions with the most
+sales activity.
+
+### Visualization
+
+The chart below shows the number of orders by region.
+
+![Order Count by Region](docs/images/orders_by_region_sowers.png)
+
+### Results
+
+This analysis helped identify which regions generated the
+highest number of sales orders. Ranking the regions made
+it easier to compare sales activity across locations.
+
+### Insights
+
+The regional sales analysis showed that US-CA generated the highest number
+of orders with 44 total sales. US-MO and US-TX tied for second place with
+39 orders each. The lowest order counts were observed in CA-QC and MX-CMX
+with 15 orders each. This analysis provides a quick view of where sales activity
+was concentrated across regions.
+
+### Files Created
+
+- `notebook/sales_by_region_sowers.ipynb`
+- `docs/images/orders_by_region_sowers.png`
+- `data/output/consumed_sales_sowers.csv`
+- `data/output/sales_sowers.duckdb`
